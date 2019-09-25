@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let upper ="QWERTYUIOPASDFGHJKLZXCVBNM";
+    let lower ="qwertyuiopasdfghjklzxcvbnm";
+    let inp = prompt("Input a String: ");
+    let out ="";
+    for(i=0;i<inp.length;i++){
+        if(upper.indexOf(inp[i])!= -1){
+            out+=lower[upper.indexOf(inp[i])];
+        }else if(lower.indexOf(inp[i])!= -1){
+            out+=upper[lower.indexOf(inp[i])];
+        }else out+=" ";
+    }
+    document.write(out);
+</script>
+</body>
+</html>
